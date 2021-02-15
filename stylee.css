@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,200;1,300&family=Quicksand:wght@500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 11px;
+    font-family: 'Montserrat', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    min-height: 70vh;
+    width: 50%;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    
+}
+
+#hero {
+    background-image: url(./img/videoblocks-abstract-blurred-smoke-in-red-and-blue-colors-over-a-black-background-in-studio-4k-footage_r_etsxvsq_thumbnail-1080_01.png);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+
+#hero::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(7, 7, 7);
+    opacity: .5;
+    z-index: -1;
+}
+#hero h1{
+    color: transparent;
+    display: block;
+    width: fit-content;
+    font-size: 5rem;
+    position: relative;
+    color: transparent;
+    animation: unbox_text 3s ease forwards;
+    animation-delay: 1s;
+}
+#hero h1 span{
+    position:absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: transparent;
+    animation: text_reveal 2s ease forwards;
+    animation-delay: .6s;
+
+}
+#hero h2{
+  color: rgb(0, 0, 0);
+  margin-left: 200px;
+  display: right;
+}
+
+HTML CSSResult Skip Results Iframe
+EDIT ON
+/* GLOBAL STYLES */
+body {
+  background: rgb(0, 0, 0);
+  padding-top: 10px;
+  display: flex;
+  justify-content:left;
+  text-align: left;
+}
+
+/* DEMO-SPECIFIC STYLES */
+#hero .col-left h2 {
+  color: rgb(255, 255, 255);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  padding-top: 30px;
+  overflow:hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .10em solid rgb(84, 84, 85); /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; 
+  animation: 
+    typing 3s steps(30, end),
+    blink-caret .5s step-end infinite;
+    text-transform: uppercase;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 2% }
+  to { width: 99% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  5rem { border-color: rgb(255, 255, 255) }
+}
+
+
+#hero .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: 3px solid rgb(255, 255, 255);
+    font-weight: bolder;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: 1.5s ease;
+    transition-property:unset;
+}
+
+#hero .cta:hover{
+    color: rgb(255, 255, 255);
+    background-color: rgb(54, 54, 54);
+    font-weight: bold;
+    
+}
+
+/*keyframes */
+
+@keyframes unbox_text{
+    to{
+        color: rgb(124, 121, 121);
+
+    }
+} 
+
+@keyframes text_reveal{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        left: 100%;
+        width: 0;
+    }
+}
+
+.container{
+    height: 100vh;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .col-left{
+    flex: .9;
+}
+.container  .col-right{
+    flex: 1;
+}
+.container .col-right img{
+    height: 100%;
+    width: 100%;
+}
+
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  .nav {
+    height: 50px;
+    width: 100%;
+    background-color: #2e2e2e;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    font-style:inherit;
+    font-weight:bolder;
+    color: rgb(255, 255, 255);
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display:inline-flex;
+    float: right;
+    font-size: 20px;
+    
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 40px 13px 20px;
+    text-decoration:none;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bolder;
+    
+  }
+  
+  .nav > .nav-links > a:hover {
+    background-color: rgb(5, 68, 119);
+    transition: 1s ease;
+    
+  }
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+  @media (max-width:600px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: sticky;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(141, 108, 19, 0.445);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid rgb(0, 0, 0);
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: rgb(0, 0, 0);
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+      
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+
+    
+  }
